@@ -91,8 +91,7 @@ private static final String BORROWER_FILE = "data/borrowers.txt";
         return books;
     }
 
-    public List<Borrower> loadBorrowers(List<Book> allBooks) {
-        List<Borrower> borrowers = new ArrayList<>();
+    public List<Borrower> loadBorrowers(List<Borrower> borrowers, List<Book> allBooks) {
         
         try (BufferedReader reader = new BufferedReader(new FileReader(BORROWER_FILE))) {
             String line;
